@@ -1,0 +1,1 @@
+{"resources":{"sql-1.sql":{"default-schema":"public"},"sql_for_data_science.sql":{"default-schema":"public","default-datasource":"postgres-jdbc-1851cae8057-5e381b37128bd33d","default-catalog":"sql-concepts"}}}

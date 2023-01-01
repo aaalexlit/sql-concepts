@@ -1,0 +1,36 @@
+{
+	"folders": {},
+	"connections": {
+		"postgres-jdbc-1851cae8057-5e381b37128bd33d": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "sql-concepts",
+			"save-password": true,
+			"read-only": true,
+			"configuration": {
+				"host": "postgres-db",
+				"port": "5432",
+				"database": "sql-concepts",
+				"url": "jdbc:postgresql://postgres-db:5432/sql-concepts",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "true"
+				},
+				"auth-model": "native"
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
