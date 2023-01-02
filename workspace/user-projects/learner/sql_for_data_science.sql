@@ -77,7 +77,7 @@ FROM
    END AS job_group
    , salary
   FROM people
- )
+ ) as t
 GROUP BY job_group
 ORDER BY average_salary DESC;
 
@@ -107,7 +107,7 @@ SELECT name
                    ROWS between UNBOUNDED PRECEDING
                    AND CURRENT ROW) AS running_total_salary_overall
 , SUM(salary) OVER(PARTITION BY gender
-  ORDER BYmbirth_year ROWS between UNBOUNDED PRECEDING
+  ORDER BY birth_year ROWS between UNBOUNDED PRECEDING
    AND CURRENT ROW) AS running_total_salary_by_gender
 , SUM(salary) OVER(ORDER BY birth_year ROWS between UNBOUNDED PRECEDING
    AND UNBOUNDED FOLLOWING) AS total_salary
@@ -160,7 +160,7 @@ WITH combined_table as (
  ORDER BY name
 )
 SELECT name
-, NVL(last_contacted, '1901-01-01') as last_contacted
+, COALESCE(last_contacted, '1901-01-01') as last_contacted
 , COALESCE(contact_type, 'phone_call') AS contact_type
 FROM combined_table;
 
@@ -178,10 +178,10 @@ WITH combined_table as (
 )
 SELECT name
 , last_contacted
-, DATE_PART(year, last_contacted) AS year_contacted
-, DATE_PART(quarter, last_contacted) AS quarter_contacted
-, DATE_PART(month, last_contacted) AS month_contacted
-, DATE_PART(day, last_contacted) AS day_contacted
+, DATE_PART('year', last_contacted) AS year_contacted
+, DATE_PART('quarter', last_contacted) AS quarter_contacted
+, DATE_PART('month', last_contacted) AS month_contacted
+, DATE_PART('day', last_contacted) AS day_contacted
 , contact_type
 FROM combined_table
 WHERE last_contacted IS NOT NULL;
