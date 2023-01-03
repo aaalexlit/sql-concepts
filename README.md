@@ -12,7 +12,7 @@ If you don't have one you can register it on the [Docker Hub](https://hub.docker
 ## Follow Along
 1. Log into [Play With Docker](https://labs.play-with-docker.com/) and press "Start"
 1. Press a " + ADD NEW INSTANCE"  
-You'll see a terminal appear 
+You'll see a terminal appear  
 ![Add new instance button](https://raw.githubusercontent.com/aaalexlit/sql-concepts/main/images/new_instance.png)
 1. In the terminal clone this repo
     ```bash
@@ -39,14 +39,13 @@ Press the "8080" one and you'll have a new tab with an instance of [Cloudbeaver]
 
 ## Useful Cloudbeaver shortcuts
 
-`Ctrl+Enter` executes a statement under the cursor
+`Ctrl+Enter` executes a statement under the cursor  
 `Ctrl+Shift+Enter` executes a statement under the cursor in a separate tab (ie no "overwriting" the results of the previously executed statement)
-That should be enough for starters
-
+That should be enough for starters, for the rest I encourage you to check the [ Documenataion](https://dbeaver.com/docs/cloudbeaver/SQL-Editor/)
 ## Running locally
 
 Obviously, if you have Git and Docker installer on your machine, you can follow the steps above on your machine.  
-The only difference is that you'd need to go to [http://localhost:8080/](http://localhost:8080/) to see the IDE
+The only difference is that you'd need to go to [http://localhost:8080/](http://localhost:8080/) to see the Cloudbeaver's web interface
 
 ## Behind the scenes
 There are 2 docker containers
@@ -70,4 +69,4 @@ To be able to experiment and create your own tables etc, you'll need to
 
 ## Useful links:  
 [Documentation for Postgres Docker image on Docker Hub](https://hub.docker.com/_/postgres/)  
-[CloudBeaver Documenataion](https://dbeaver.com/docs/cloudbeaver/Build-and-deploy/)
+[CloudBeaver Documenataion](https://dbeaver.com/docs/cloudbeaver/)
