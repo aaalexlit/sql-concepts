@@ -6,11 +6,11 @@ Using the following repo you can start practicing SQL following the mentioned po
 
 ## Prerequisites
 
-All you need is an account with Docker that we would need to be able to use [Play With Docker](https://labs.play-with-docker.com/).  
+All you need is an account with Docker that we would need to be able to use [Play With Docker (PWD)](https://labs.play-with-docker.com/).  
 If you don't have one you can register it on the [Docker Hub](https://hub.docker.com/)
 
 ## Follow Along
-1. Log into [Play With Docker](https://labs.play-with-docker.com/) and press "Start"
+1. Log into [Play With Docker (PWD)](https://labs.play-with-docker.com/) and press "Start"
 1. Press a " + ADD NEW INSTANCE"  
 You'll see a terminal appear  
 ![Add new instance button](https://raw.githubusercontent.com/aaalexlit/sql-concepts/main/images/new_instance.png)
@@ -20,8 +20,8 @@ You'll see a terminal appear
     $ cd sql-concepts/
     $ docker compose up
     ```
-1. Wait until the needed images are pulled 
-next to the "OPEN PORT" button on the upper row you'll see a list of hyperlinks with the corresponding ports.
+1. Wait until the needed images are pulled  
+Next to the "OPEN PORT" button on the upper row you'll see a list of hyperlinks with the corresponding ports.
 ![hyperlinked ports](https://raw.githubusercontent.com/aaalexlit/sql-concepts/main/images/open_gui.png)
 Press the "8080" one and you'll have a new tab with an instance of [Cloudbeaver](https://dbeaver.com/docs/cloudbeaver/Build-and-deploy/) - a database management tool with a rich web interface
 1. You need to login with `learner/learner` to Cloudbeaver to get access to the preconfigured connection and sql sheet.
@@ -33,18 +33,20 @@ Press the "8080" one and you'll have a new tab with an instance of [Cloudbeaver]
 1. Double-click it and select the "Restore" option.
 ![Restore connection](https://raw.githubusercontent.com/aaalexlit/sql-concepts/main/images/restore_connection.png)
 1. That's it! you're ready to follow along the article.
-
+1. If you want to come back to your changes after your PWD session is finished (it lasts 4 hours), I would recommend you to save the script locally and then load it to the new instance.  
+![Upload sql script](https://raw.githubusercontent.com/aaalexlit/sql-concepts/main/images/upload_sql_script.png)
 > Important note: always run the first statement `SET search_path TO examples;` after you restore your connection. Otherwise you'll see the following error
 ![Relation doesn't exist error](https://raw.githubusercontent.com/aaalexlit/sql-concepts/main/images/relation_doesnt_exist.png)
 
 ## Useful Cloudbeaver shortcuts
 
 `Ctrl+Enter` executes a statement under the cursor  
-`Ctrl+Shift+Enter` executes a statement under the cursor in a separate tab (ie no "overwriting" the results of the previously executed statement)
-That should be enough for starters, for the rest I encourage you to check the [ Documenataion](https://dbeaver.com/docs/cloudbeaver/SQL-Editor/)
+`Ctrl+Shift+Enter` executes a statement under the cursor in a separate tab (ie no "overwriting" the results of the previously executed statement)  
+That should be enough for starters, for the rest I encourage you to check the [Documentation](https://dbeaver.com/docs/cloudbeaver/SQL-Editor/)
+
 ## Running locally
 
-Obviously, if you have Git and Docker installer on your machine, you can follow the steps above on your machine.  
+Of course, if you have Git and Docker installed on your machine, you can follow the steps above locally.  
 The only difference is that you'd need to go to [http://localhost:8080/](http://localhost:8080/) to see the Cloudbeaver's web interface
 
 ## Behind the scenes
@@ -64,8 +66,11 @@ and 2 volumes with
 Coudbeaver Session is set up to last 30 minutes. You can change that!  
 
 To be able to experiment and create your own tables etc, you'll need to 
-1. Edit connection properties
-1. Set readOnlyMode to `ignore`
+1. Edit connection properties  
+![Edit connection](https://raw.githubusercontent.com/aaalexlit/sql-concepts/main/images/edit_connection.png)  
+![Driver properties](https://raw.githubusercontent.com/aaalexlit/sql-concepts/main/images/driver_properties.png)
+1. Set readOnlyMode to `ignore`  
+![Read only mode](https://raw.githubusercontent.com/aaalexlit/sql-concepts/main/images/read_only_mode.png)
 
 ## Useful links:  
 [Documentation for Postgres Docker image on Docker Hub](https://hub.docker.com/_/postgres/)  
